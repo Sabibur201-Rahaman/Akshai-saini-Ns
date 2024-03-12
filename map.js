@@ -16,14 +16,6 @@ const users = [
   },
 ];
 
-const outPut=users.reduce(function(acc,curr){
-    if(acc[curr.Age]){
-        (acc[curr.Age])=++acc[curr.Age]
-
-    }else{
-        (acc[curr.Age])=1      //reduce helps to findout that how many ages are more than one or more!!
-    }
-    return acc
-},{})
+const outPut=users.filter((x)=>x.Age<30).map((x)=>x.FirstName)
 
 console.log(outPut)
